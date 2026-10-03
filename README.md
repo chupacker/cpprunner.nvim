@@ -1,6 +1,6 @@
-# cpp-runner.nvim
+# cpprunner.nvim
 
-A lightweight, asynchronous C++ compiler and runner for Neovim. Inspired by classic IDE workflows (like Dev-C++), `cpp-runner.nvim` lets you instantly compile and execute C++ source files with a single keybinding, displaying output inside an interactive Neovim terminal split with zero UI lag.
+A lightweight, asynchronous C++ compiler and runner for Neovim. Inspired by classic IDE workflows (like Dev-C++), `cpprunner.nvim` lets you instantly compile and execute C++ source files with a single keybinding, displaying output inside an interactive Neovim terminal split with zero UI lag.
 
 ---
 
@@ -22,7 +22,7 @@ Install using your preferred Neovim package manager.
 
 ```lua
 {
-  "your-username/cpp-runner.nvim",
+  "chupacker/cpprunner.nvim",
   ft = { "cpp", "c" }, -- Lazy-load on C/C++ filetypes
   opts = {
     keymap = "<F11>",
@@ -38,10 +38,10 @@ Install using your preferred Neovim package manager.
 
 ```lua
 vim.pack.add({
-  url = "https://github.com/your-username/cpp-runner.nvim",
+  url = "https://github.com/chupacker/cpprunner.nvim",
 })
 
-require("cpp-runner").setup({
+require("cpprunner").setup({
   keymap = "<F11>",
 })
 ```
@@ -50,9 +50,9 @@ require("cpp-runner").setup({
 
 ```lua
 use {
-  "your-username/cpp-runner.nvim",
+  "chupacker/cpprunner.nvim",
   config = function()
-    require("cpp-runner").setup()
+    require("cpprunner").setup()
   end
 }
 ```
@@ -61,10 +61,10 @@ use {
 
 ## Configuration
 
-Call `require("cpp-runner").setup(opts)` in your config. Below are the available configuration options along with their default values:
+Call `require("cpprunner").setup(opts)` in your config. Below are the available configuration options along with their default values:
 
 ```lua
-require("cpp-runner").setup({
+require("cpprunner").setup({
   -- Keymap to trigger compilation and execution (set to nil or false to disable)
   keymap = "<F11>",
 
